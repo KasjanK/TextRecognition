@@ -4,23 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/scanner" />
+
     <TextView
+        android:id="@+id/introText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="50dp"
-        android:layout_above="@id/galleryBtn"
+        android:layout_below="@id/logo"
         android:text="Welcome to text recognizer!\nBy pressing the button you will be able to choose a picture and detect some text!"
         android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="15dp" />
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/galleryBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:text="Next"
-        android:layout_centerInParent="true" />
+        android:layout_below="@id/introText"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"/>
 
 </RelativeLayout>
